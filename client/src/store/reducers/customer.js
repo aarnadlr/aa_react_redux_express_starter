@@ -1,9 +1,14 @@
 import {GET_CUSTOMERS} from '../actions/constants'
 
+                        // state is currently an ARRAY!
 const customerReducer = (state = [], {type, payload}) => {
     switch (type) {
       case GET_CUSTOMERS:
-        return payload
+        // state is currently an ARRAY!
+        return [
+          ...payload
+        ]
+
       default:
         return state
     }
